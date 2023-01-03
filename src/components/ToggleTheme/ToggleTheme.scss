@@ -1,0 +1,11 @@
+@import '../../styles.scss';
+
+.toggle-container {
+    position: absolute;
+    top: vw(20, $desktop);
+    left: vw(50, $desktop);
+    .icon {
+        width: vw(150, $desktop);
+        height: vw(150, $desktop);;
+    }
+}

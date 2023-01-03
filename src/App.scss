@@ -1,0 +1,15 @@
+@import './styles.scss';
+
+.background-slang {
+    width: 0;
+    height: 0;
+    border-right: vw(500, $desktop) solid transparent;
+    &.light {
+        border-top: vw(500, $desktop) solid $light-blue;
+        
+    }
+
+    &.dark {
+        border-top: vw(500, $desktop) solid $dark-blue;
+    }
+}

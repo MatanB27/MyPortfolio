@@ -1,0 +1,16 @@
+// CONVERT PIXELS TO VW
+@function vw($pixels, $width) {
+    $size: ($pixels / $width) * 100;
+    @return $size + vw;
+}
+
+$media_desktop_large: 1500 + px;
+$desktop: 1200;
+$desktop_large: 1500;
+
+
+// DARK THEME
+$dark-blue: rgb(30,63,102);
+
+// LIGHT THEME
+$light-blue: rgb(188,210,232);
