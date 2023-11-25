@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import Header from './components/Header/header';
+import ToggleTheme from './components/ToggleTheme/ToggleTheme';
 
 function App() {
 
@@ -27,35 +28,34 @@ function App() {
       setChangeState(false)
     }, 350) 
   }
-  
+
+  const themeProps = {
+    theme: lightTheme,
+    changeTheme: changeTheme,
+    changeState: changeState,
+  };
+
   function renderScreen() {
-    
     return (
-      <div>OK</div>
+      <>
+        <ToggleTheme {...themeProps}/>
+      </>
     )
   }
 
-
   return (
-    <>
-    <div className={"App "   + (lightTheme.className)}>
-      <div>
-        <Header
-          theme={lightTheme} 
-          changeTheme={changeTheme}
-          changeState={changeState}
-        />
 
-        </div>
+    <div className={"App "   + (lightTheme.className)}>
+        <Header {...themeProps}/>
+
+        
         <div className={"body"}>
           {
             renderScreen()
           }
-        </div>  
-        
+        </div>
     </div>
 
-    </>
   );
 }
 

@@ -21,11 +21,11 @@ export default function ToggleTheme(props) {
     return (
         <div className={"toggle-container"}>
             <img className={'icon ' + (dynamicClass())} src={theme.light_theme ? Sun : Moon} alt={'star'}/>
-            <ToggleButton
+            {/* <ToggleButton
                 onClick={onClick}
                 theme={theme}
                 changeState={dynamicClass}
-            />
+            /> */}
         </div>
     )
 }

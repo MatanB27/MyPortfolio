@@ -9,7 +9,7 @@ export default function Header({
 }) {
     return (
         <header>
-            <ToggleTheme
+            <ToggleButton
                 theme={theme}
                 onClick={changeTheme}
                 changeState={changeState}
