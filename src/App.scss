@@ -2,71 +2,20 @@
 
 $current: $desktop;
 
-.fade-enter {
-    opacity: 0;
-    transform: translateX(-60%);
-}
   
-.fade-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: all $transitionSpeed;
-}
-  
-// .fade-exit {
-//     opacity: 1;
-//     transform: translateX(0);
-
-// }
-
-// .fade-exit-active {
-//     opacity: 0;
-//     transform: translateX(-60%);
-//     transition: all $transitionSpeed;
-// }
 .App {
     direction: ltr;
     min-height: 100vh;
     transition: all $transitionSpeed ease-in-out;
     position: relative;
     
-    .background-slant {
-        width: 0;
-        height: 0;
-        border-left: vw(500, $current) solid transparent;
-        transition: all $transitionSpeed ease-in-out;  
-        margin-left: auto;
-        position: absolute;
-        right: 0;
-    }
-
     .body {
-        max-height: vw(100, $current);
-        padding-top: vw(50, $current);
-        padding-left: vw(15, $current);
-        z-index: 1;
+   
     }
     &.light {
         background-color: $light-darker-grey;
         transition: all $transitionSpeed ease-in-out;
 
-        .background-slant {
-            border-top: vw(500, $current) solid $light-steel-blue;
-            transition: all $transitionSpeed ease-in-out; 
-        }
-
-        .toggle-container {
-            .toggle-btn-container {
-                background-color: $light-darker-grey;
-                border: 5px solid $dark-grey;
-                transition: all $transitionSpeed ease-in-out;
-
-                .toggle-icon {
-                    transform: translateX(0);
-                    transition: all $transitionSpeed ease-in-out;
-                }
-            }
-        }
 
         .text-theme {
             color: $dark-blue-grey;
@@ -82,23 +31,6 @@ $current: $desktop;
         background-color: $dark-grey;
         transition: all $transitionSpeed ease-in-out;
 
-        .background-slant {
-            border-top: vw(500, $current) solid $dark-blue-grey;
-            transition: all $transitionSpeed ease-in-out; 
-        }
-
-        .toggle-container {   
-            .toggle-btn-container {
-                background-color: $light-darker-grey;
-                border: 5px solid $light-steel-blue;
-                transition: all $transitionSpeed ease-in-out;
-        
-                .toggle-icon {
-                    transform: translateX(120%);
-                    transition: all $transitionSpeed ease-in-out;
-                }
-            }
-        }
         .text-theme {
             color: $light-white;
             transition: all $transitionSpeed ease-in-out; 
@@ -114,9 +46,6 @@ $current: $desktop;
     $current: $desktop_large;
 
     .App {
-        .background-slant {
-            border-left: vw(500, $current) solid transparent;
-        }
 
         .body {
             padding-top: vw(50, $current);
@@ -124,14 +53,10 @@ $current: $desktop;
         }
         
         &.light {
-            .background-slant {
-                border-top: vw(500, $current) solid $light-steel-blue;
-            }
+
         }
         &.dark { 
-            .background-slant {
-                border-top: vw(500, $current) solid $dark-blue-grey;
-            }
+
         }
         
     }
