@@ -1,6 +1,6 @@
 // CONVERT PIXELS TO VW
 @function vw($pixels, $width) {
-    $size: ($pixels / $width) * 100;
+    $size: calc(($pixels / $width) * 100);
     @return $size + vw;
 }
 
@@ -10,7 +10,27 @@ $desktop_large: 1500;
 
 
 // DARK THEME
-$dark-blue: rgb(30,63,102);
+$dark-grey: #343a40;
+$dark-grey-darker: #343a40;
+$dark-blue-grey: #23272b;
+$light-gray: #8d8d8d;
 
 // LIGHT THEME
-$light-blue: rgb(188,210,232);
+$light-white: #ffffff;
+$light-grey: #f8f9fa;
+$light-darker-grey: #e9ecef;
+$light-steel-blue: #66b2ff;
+
+// Fonts
+$font-arial:  Arial, sans-serif;
+
+
+// Other vars
+$transitionSpeed: 350ms;
+
+
+
+p {
+    margin: 0;
+    padding: 0;
+}

@@ -1,11 +1,44 @@
 @import '../../styles.scss';
 
+$current: $desktop;
 .toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: vw(20, $desktop);
-    left: vw(50, $desktop);
+    top: - vw(475, $current);
+    right: vw(50, $current);
     .icon {
-        width: vw(150, $desktop);
-        height: vw(150, $desktop);;
+        width: vw(150, $current);
+        height: vw(150, $current);
+        transition: all $transitionSpeed ease-in-out;
+        opacity: 0;
+        transform: translateY(60%);
+        margin-bottom: vw(100, $current);
+        user-select: none;
+        &.light { 
+            transition: all $transitionSpeed ease-in-out;
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        &.dark { 
+            transition: all $transitionSpeed ease-in-out;
+            opacity:1;
+            transform: translateY(0%);
+        }
+    }
+}
+
+@media (min-width: $media_desktop_large) {
+    $current: $desktop_large;
+
+    .toggle-container {
+        top: - vw(475, $current);
+        right: vw(50, $current);
+        .icon {
+            width: vw(150, $current);
+            height: vw(150, $current);
+            margin-bottom: vw(100, $current);
+        }
     }
 }

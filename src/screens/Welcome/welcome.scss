@@ -1,0 +1,40 @@
+@import '../../styles.scss';
+$current: $desktop;
+
+.resume-title {
+    font-family: $font-arial;
+    font-weight: bold;
+    font-size: vw(150, $current);
+    width: vw(110, $current);
+    transition: all $transitionSpeed ease-in-out; 
+}
+
+.resume-sub-title {
+    font-family: $font-arial;
+    font-size: vw(20, $current);
+    font-weight: bold;
+}
+
+
+@media (min-width: $media_desktop_large) {
+    $current: $desktop_large;
+
+    .background-slant {
+        border-left: vw(500, $current) solid transparent;
+    }
+    
+    .resume-title {
+        font-size: vw(150, $current);
+        width: vw(110, $current);
+        top: - vw(70, $current);
+        left: vw(20, $current);
+    }
+    
+    .resume-sub-title {
+        font-family: $font-arial;
+        font-size: vw(20, $current);
+        top:  vw(50, $current);
+        left: vw(25, $current);
+    }
+    
+}

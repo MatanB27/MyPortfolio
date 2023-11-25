@@ -1,0 +1,90 @@
+@import '../../styles.scss';
+
+$current: $desktop;
+
+.hidden { 
+    visibility: hidden;
+}
+@keyframes arrow-animation-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(45%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrow-animation-left {
+    0% {
+      transform: translateX(0) rotate(180deg);
+    }
+    50% {
+      transform: translateX(-45%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+    }
+}
+
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: vw(50, $current);
+    width: 100%;
+    z-index: 1;
+    .btn {
+        cursor: pointer;
+        height: vw(40, $current);
+        width: vw(160, $current);
+        border-radius: 25px;
+        background-color: transparent;
+        border: none;
+
+        .btn-icon {
+            width: vw(50, $current);
+            height: vw(50, $current);
+        }
+
+        &.go-forward {
+        
+            .btn-icon {
+                animation: arrow-animation-right 1.3s ease-in-out infinite;
+            }
+        }
+
+        &.go-back {
+            .btn-icon {
+                animation: arrow-animation-left 1.3s ease-in-out infinite;
+            }
+        }
+    }
+    .empty {
+        height: vw(40, $current);
+        width: vw(160, $current);
+    }
+}
+
+@media (min-width: $media_desktop_large) {
+    $current: $desktop_large;
+    .btns-container {
+        bottom: vw(50, $current);
+        .btn {
+            cursor: pointer;
+            height: vw(40, $current);
+            width: vw(160, $current);
+            .btn-icon {
+                width: vw(50, $current);
+                height: vw(50, $current);
+            }
+        }
+        .empty {
+            height: vw(40, $current);
+            width: vw(160, $current);
+        }
+    }
+}

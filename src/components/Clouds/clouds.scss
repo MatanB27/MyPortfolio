@@ -1,0 +1,215 @@
+@import '../../styles.scss';
+
+$current: $desktop;
+
+.sky-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    .stars {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .star {
+            background-color: #ffffff;
+            position: absolute;
+            &.small {
+                width: vw(2, $current);
+                height: vw(2, $current);
+            }
+            &.medium {
+                width: vw(3.5, $current);
+                height: vw(3.5, $current);
+            }
+            &.big {
+                width: vw(5, $current);
+                height: vw(5, $current);
+            }
+            &:nth-child(1) {
+                top: vw(40, $current);
+                left: vw(40, $current);
+            }
+            &:nth-child(2) {
+                top: vw(42, $current);
+                left: vw(240, $current);
+            }
+            &:nth-child(3) {
+                top: vw(140, $current);
+                left: vw(30, $current);
+            }
+            &:nth-child(4) {
+                top: vw(40, $current);
+                left: vw(940, $current);
+            }
+            &:nth-child(5) {
+                top: vw(76, $current);
+                left: vw(700, $current);
+            }
+            &:nth-child(6) {
+                top: vw(240, $current);
+                left: vw(920, $current);
+            }
+            &:nth-child(7) {
+                top: vw(15, $current);
+                left: vw(440, $current);
+            }
+            &:nth-child(8) {
+                top: vw(110, $current);
+                left: vw(200, $current);
+            }
+            &:nth-child(9) {
+                top: vw(125, $current);
+                left: vw(900, $current);
+            }
+            &:nth-child(10) {
+                top: vw(50, $current);
+                left: vw(1000, $current);
+            }
+            &:nth-child(11) {
+                top: vw(15, $current);
+                left: vw(540, $current);
+            }
+            &:nth-child(12) {
+                top: vw(150, $current);
+                left: vw(430, $current);
+            }
+            &:nth-child(13) {
+                top: vw(227, $current);
+                left: vw(900, $current);
+            }
+            &:nth-child(14) {
+                top: vw(232, $current);
+                left: vw(764, $current);
+            }
+            &:nth-child(15) {
+                top: vw(21, $current);
+                left: vw(123, $current);
+            }
+            &:nth-child(16) {
+                top: vw(310, $current);
+                left: vw(240, $current);
+            }
+            &:nth-child(17) {
+                top: vw(77, $current);
+                left: vw(777, $current);
+            }
+            &:nth-child(18) {
+                top: vw(88, $current);
+                left: vw(127, $current);
+            }
+        }
+    }
+}
+
+ @media(min-width: $media_desktop_large) {
+    $current: $desktop_large;
+
+.sky-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    .stars {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .star {
+            background-color: #ffffff;
+            position: absolute;
+            &.small {
+                width: vw(2, $current);
+                height: vw(2, $current);
+            }
+            &.medium {
+                width: vw(3.5, $current);
+                height: vw(3.5, $current);
+            }
+            &.big {
+                width: vw(5, $current);
+                height: vw(5, $current);
+            }
+            &:nth-child(1) {
+                top: vw(40, $current);
+                left: vw(40, $current);
+            }
+            &:nth-child(2) {
+                top: vw(42, $current);
+                left: vw(240, $current);
+            }
+            &:nth-child(3) {
+                top: vw(140, $current);
+                left: vw(30, $current);
+            }
+            &:nth-child(4) {
+                top: vw(40, $current);
+                left: vw(1040, $current);
+            }
+            &:nth-child(5) {
+                top: vw(76, $current);
+                left: vw(700, $current);
+            }
+            &:nth-child(6) {
+                top: vw(240, $current);
+                left: vw(920, $current);
+            }
+            &:nth-child(7) {
+                top: vw(15, $current);
+                left: vw(440, $current);
+            }
+            &:nth-child(8) {
+                top: vw(110, $current);
+                left: vw(1200, $current);
+            }
+            &:nth-child(9) {
+                top: vw(125, $current);
+                left: vw(1300, $current);
+            }
+            &:nth-child(10) {
+                top: vw(50, $current);
+                left: vw(1000, $current);
+            }
+            &:nth-child(11) {
+                top: vw(15, $current);
+                left: vw(540, $current);
+            }
+            &:nth-child(12) {
+                top: vw(150, $current);
+                left: vw(430, $current);
+            }
+            &:nth-child(13) {
+                top: vw(227, $current);
+                left: vw(1300, $current);
+            }
+            &:nth-child(14) {
+                top: vw(232, $current);
+                left: vw(764, $current);
+            }
+            &:nth-child(15) {
+                top: vw(21, $current);
+                left: vw(123, $current);
+            }
+            &:nth-child(16) {
+                top: vw(310, $current);
+                left: vw(240, $current);
+            }
+            &:nth-child(17) {
+                top: vw(77, $current);
+                left: vw(777, $current);
+            }
+            &:nth-child(18) {
+                top: vw(88, $current);
+                left: vw(127, $current);
+            }
+        }
+    }
+}
+ }

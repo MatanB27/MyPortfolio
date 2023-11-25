@@ -1,0 +1,36 @@
+@import '../../styles.scss';
+
+$current: $desktop;
+
+.toggle-btn-container {
+    cursor: pointer;
+    height: vw(22, $current);
+    width: vw(50, $current);
+    border-radius: 25px;
+    transition: all $transitionSpeed ease-in-out;
+    position: relative;
+
+    .toggle-icon {
+        position: absolute;
+        top: 0;
+        width: vw(22, $current);
+        height: vw(22, $current);
+        transition: all $transitionSpeed ease-in-out;
+    }
+    
+}
+
+@media (min-width: $media_desktop_large) {
+    $current: $desktop_large;
+
+    .toggle-btn-container {
+        height: vw(22, $current);
+        width: vw(50, $current);
+        .toggle-icon {
+            width: vw(22, $current);
+            height: vw(22, $current);
+            user-select: none;
+        }
+   
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+$current: $desktop;
+
+.block {
+    display: block;
+}
+.text {
+    line-height: 1.65;
+}
+.aboutme-section {
+    font-family: $font-arial;
+    
+    .aboutme-title {
+        font-size: vw(80, $current);
+        margin-top: vw(20, $current);
+        margin-bottom: vw(20, $current);
+    }
+
+    .aboutme-content {
+        font-family: $font-arial;
+        font-size: vw(16, $current);
+    }
+
+    .contact-info-container {
+        margin-top: vw(110, $current);
+        font-size: vw(12, $current);
+    }
+}
+
+@media (min-width: $desktop_large) {
+    $current: $desktop_large;
+    .aboutme-section {
+
+        .aboutme-title {
+            font-size: vw(80, $current);
+            margin-top: vw(20, $current);
+            margin-bottom: vw(20, $current);
+        }
+    
+        .aboutme-content {
+            font-size: vw(16, $current);
+        }
+    
+        .contact-info-container {
+            margin-top: vw(110, $current);
+            font-size: vw(12, $current);
+        }
+    }
+}
