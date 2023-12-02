@@ -6,7 +6,7 @@ import './ToggleTheme.scss';
 
 export default function ToggleTheme(props) {
     
-    const {theme, onClick, changeState} = props;
+    const {theme, changeState} = props;
 
     function dynamicClass() { 
         if(changeState) {
@@ -21,11 +21,6 @@ export default function ToggleTheme(props) {
     return (
         <div className={"toggle-container"}>
             <img className={'icon ' + (dynamicClass())} src={theme.light_theme ? Sun : Moon} alt={'star'}/>
-            {/* <ToggleButton
-                onClick={onClick}
-                theme={theme}
-                changeState={dynamicClass}
-            /> */}
         </div>
     )
 }

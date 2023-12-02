@@ -4,9 +4,15 @@
     @return $size + vw;
 }
 
-$media_desktop_large: 1500 + px;
+$mobile: 320;
+$tablet: 768;
 $desktop: 1200;
 $desktop_large: 1500;
+
+$media_tablet: 768 + px;
+$media_desktop: 1200 + px;
+$media_desktop_large: 1500 + px;
+
 
 
 // DARK THEME
@@ -29,6 +35,9 @@ $font-arial:  Arial, sans-serif;
 $transitionSpeed: 350ms;
 
 
+button {
+    all: unset;
+};
 
 p {
     margin: 0;

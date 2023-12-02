@@ -1,2 +1,40 @@
-@import './styles.scss';
+@import '../../styles.scss';
 
+$current: $mobile;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: vw(40, $current);
+    background-color: $light-grey;
+    padding-inline: vw(10, $current);
+
+    .menu-icon {
+        cursor: pointer;
+        width: vw(22, $current);
+        height: vw(22, $current);
+        transition: transform 0.2s ease-in-out;
+        &.menu-open {
+            transform: scale(1.2) rotate(90deg);; /* Adjust the transformation as needed */
+        }
+
+        &.menu-closed {
+            transform: scale(1) rotate(0deg);
+        }
+
+    }
+      
+    .menu-closed {
+    
+    }
+}
+@media (min-width: $media-tablet) {
+$current: $tablet;
+}
+@media (min-width: $media-desktop) {
+$current: $desktop;
+}
+@media (min-width: $media-desktop-large) {
+$current: $desktop-large;
+}
