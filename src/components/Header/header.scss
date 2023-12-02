@@ -14,9 +14,9 @@ header {
         cursor: pointer;
         width: vw(22, $current);
         height: vw(22, $current);
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.3s ease-out;
         &.menu-open {
-            transform: scale(1.2) rotate(90deg);; /* Adjust the transformation as needed */
+            transform: scale(1.2) rotate(90deg);
         }
 
         &.menu-closed {
@@ -24,11 +24,8 @@ header {
         }
 
     }
-      
-    .menu-closed {
-    
-    }
 }
+
 @media (min-width: $media-tablet) {
 $current: $tablet;
 }
