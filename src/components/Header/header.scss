@@ -22,16 +22,38 @@ header {
         &.menu-closed {
             transform: scale(1) rotate(0deg);
         }
-
     }
 }
 
 @media (min-width: $media-tablet) {
-$current: $tablet;
+    $current: $tablet;
+
+    header {
+        height: vw(40, $current);
+        padding-inline: vw(10, $current);
+    
+        .menu-icon {
+            width: vw(22, $current);
+            height: vw(22, $current);
+        }
+    }
 }
 @media (min-width: $media-desktop) {
-$current: $desktop;
+    $current: $desktop;
+    header {
+        height: vw(60, $current);
+        padding-inline: vw(25, $current);
+    
+        .menu-icon {
+            display: none;
+        }
+    }
 }
 @media (min-width: $media-desktop-large) {
-$current: $desktop-large;
+    $current: $desktop-large;
+    header {
+        height: vw(60, $current);
+        padding-inline: vw(25, $current);
+    
+    }
 }
