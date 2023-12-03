@@ -9,14 +9,15 @@ $current: $desktop;
     transition: all $transitionSpeed ease-in-out;
     position: relative;
     
-    .body {
-   
-    }
     &.light {
         background-color: $light-darker-grey;
         transition: all $transitionSpeed ease-in-out;
 
-
+        header {
+            background-color: $light-grey;
+            transition: all $transitionSpeed ease-in-out;
+            box-shadow: 0 1px 10px -2px $dark-blue-grey;
+        }
         .text-theme {
             color: $dark-blue-grey;
             transition: all $transitionSpeed ease-in-out; 
@@ -28,8 +29,14 @@ $current: $desktop;
     }
 
     &.dark {
-        background-color: $dark-grey;
+        background-color: $dark-blue-grey;
         transition: all $transitionSpeed ease-in-out;
+        
+        header {
+            background-color: $dark-grey-darker;
+            transition: all $transitionSpeed ease-in-out;
+            box-shadow: 0 1px 10px -2px $light-grey;
+        }
 
         .text-theme {
             color: $light-white;

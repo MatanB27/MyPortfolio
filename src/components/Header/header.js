@@ -16,23 +16,34 @@ export default function Header({
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const handleMenu = () => setIsMenuOpen(prev => !prev)
 
-    console.log('isMenuOpen: ', isMenuOpen);
     return (
         <header>
-            <ToggleButton
-                theme={theme}
-                onClick={changeTheme}
-                changeState={changeState}
-            />
-            <span>Xdddd</span>
-            <button onClick={handleMenu}>
-                <img
-                    className={`menu-icon ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}
-                    src={isMenuOpen ? CloseIcon : MenuIcon}
-                    alt={'menu'}
+            <div className={"header-top"}>
+                <ToggleButton
+                    theme={theme}
+                    onClick={changeTheme}
+                    changeState={changeState}
                 />
-            </button>
-            {/* <LottieAnimation
+                <span>Xdddd</span>
+                <button onClick={handleMenu}>
+                    <img
+                        className={`menu-icon ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}
+                        src={isMenuOpen ? CloseIcon : MenuIcon}
+                        alt={'menu'}
+                    />
+                </button>
+            </div>
+            <div className={`menu ${isMenuOpen ? 'open' : 'closed'}`}>
+                adsa
+                asdsa
+                asdsaasd
+                adas
+            </div>
+        </header>
+    )    
+}
+
+ {/* <LottieAnimation
                 className={'menu-icon'}
                 animation={menuAnimation}
                 autoplay={false}
@@ -40,6 +51,3 @@ export default function Header({
                 onClick={handleMenu}
                 play={isMenuOpen}
             /> */}
-        </header>
-    )    
-}

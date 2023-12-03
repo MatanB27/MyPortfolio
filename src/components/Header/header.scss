@@ -1,35 +1,56 @@
 @import '../../styles.scss';
 
 $current: $mobile;
-
+$headerHeight: vw(40, $current);
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: vw(40, $current);
-    background-color: $light-grey;
+    justify-content: center;
+    flex-direction: column;
+    height: $headerHeight;
     padding-inline: vw(10, $current);
+    position: relative;
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .menu-icon {
+            cursor: pointer;
+            width: vw(22, $current);
+            height: vw(22, $current);
+            transition: all $transitionSpeed ease-in-out;
+            
+            &.menu-open {
+                transform: scale(1.2) rotate(90deg);
+            }
 
-    .menu-icon {
-        cursor: pointer;
-        width: vw(22, $current);
-        height: vw(22, $current);
-        transition: transform 0.3s ease-out;
-        &.menu-open {
-            transform: scale(1.2) rotate(90deg);
+            &.menu-closed {
+                transform: scale(1) rotate(0deg);
+            }
         }
-
-        &.menu-closed {
-            transform: scale(1) rotate(0deg);
+    }
+    .menu {
+        //TODO: finish!
+        height: 0;
+        display: none;
+        transition: all $transitionSpeed ease-in-out;
+        &.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: $headerHeight;
+            height: vw(100, $current);
         }
     }
 }
 
 @media (min-width: $media-tablet) {
     $current: $tablet;
-
+    $headerHeight: vw(40, $current);
     header {
-        height: vw(40, $current);
+        height: $headerHeight;
         padding-inline: vw(10, $current);
     
         .menu-icon {
@@ -40,8 +61,9 @@ header {
 }
 @media (min-width: $media-desktop) {
     $current: $desktop;
+    $headerHeight: vw(60, $current);
     header {
-        height: vw(60, $current);
+        height: $headerHeight;
         padding-inline: vw(25, $current);
     
         .menu-icon {
@@ -51,8 +73,9 @@ header {
 }
 @media (min-width: $media-desktop-large) {
     $current: $desktop-large;
+    $headerHeight: vw(60, $current);
     header {
-        height: vw(60, $current);
+        height: $headerHeight;
         padding-inline: vw(25, $current);
     
     }
