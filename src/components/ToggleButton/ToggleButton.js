@@ -5,9 +5,9 @@ import CircularSun from '../../assets/icons/circular-sun.svg';
 import './ToggleButton.scss';
 export default function ToggleButton(props) {
 
-    const {onClick, theme, changeState} = props;
+    const {onClick, theme, changeState, className} = props;
     return (
-        <div onClick={onClick} className={'toggle-btn-container ' + (theme.className)}>
+        <div onClick={onClick} className={'toggle-btn-container ' + (theme.className) + ' ' + className}>
             <img
                 className={'toggle-icon'}
                 src={theme.light_theme ? CircularSun : CircularMoon}

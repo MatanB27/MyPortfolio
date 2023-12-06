@@ -2,46 +2,53 @@
 
 $current: $mobile;
 $headerHeight: vw(40, $current);
+$headerMargin: vw(8, $current);
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    height: $headerHeight;
-    padding-inline: vw(10, $current);
     position: relative;
+    width: 100%;
     .header-top {
+        height: $headerHeight;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        z-index: 2;
+        background-color: white;
+
+        .toggle-custom {
+            margin-inline-start: $headerMargin;
+        }
         .menu-icon {
             cursor: pointer;
             width: vw(22, $current);
             height: vw(22, $current);
             transition: all $transitionSpeed ease-in-out;
-            
+            margin-inline-end: $headerMargin;
+            transform: scale(1) rotate(0deg);
             &.menu-open {
-                transform: scale(1.2) rotate(90deg);
-            }
-
-            &.menu-closed {
-                transform: scale(1) rotate(0deg);
+                transform: scale(1.4) rotate(450deg);
             }
         }
     }
     .menu {
-        //TODO: finish!
-        height: 0;
-        display: none;
-        transition: all $transitionSpeed ease-in-out;
+        height: vw(120, $current);
+        transition: transform $transitionSpeed ease-in-out, top $transitionSpeed ease-in-out;
+        transform: translateY(- vw(80, $current));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: green;
         &.open {
-            display: flex;
             flex-direction: column;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            top: $headerHeight;
-            height: vw(100, $current);
+            top: - vw(45, $current);   
+            transform: translateY(vw(85, $current));
+            z-index: 1;
         }
     }
 }

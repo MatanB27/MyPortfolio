@@ -17,29 +17,34 @@ export default function Header({
     const handleMenu = () => setIsMenuOpen(prev => !prev)
 
     return (
-        <header>
-            <div className={"header-top"}>
-                <ToggleButton
-                    theme={theme}
-                    onClick={changeTheme}
-                    changeState={changeState}
-                />
-                <span>Xdddd</span>
-                <button onClick={handleMenu}>
-                    <img
-                        className={`menu-icon ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}
-                        src={isMenuOpen ? CloseIcon : MenuIcon}
-                        alt={'menu'}
+        <>
+            <header>
+                <div className={"header-top"}>
+                    <ToggleButton
+                        className={'toggle-custom'}
+                        theme={theme}
+                        onClick={changeTheme}
+                        changeState={changeState}
                     />
-                </button>
-            </div>
-            <div className={`menu ${isMenuOpen ? 'open' : 'closed'}`}>
-                adsa
-                asdsa
-                asdsaasd
-                adas
-            </div>
-        </header>
+                    <span>Xdddd</span>
+                    <button className={'header-item'} onClick={handleMenu}>
+                        <img
+                            className={`menu-icon ${isMenuOpen ? 'menu-open' : ''}`}
+                            src={isMenuOpen ? CloseIcon : MenuIcon}
+                            alt={'menu'}
+                        />
+                    </button>
+                </div>
+                <div className={`menu ${isMenuOpen ? 'open' : 'closed'}`}>
+                    adsa
+                    asdsa
+                    asdsaasd
+                    adasdasdsa dadadasdsadsa
+                </div>
+            </header>
+            {/* TODO: finish@ */}
+        <div className={'backdrop'}/> 
+        </>
     )    
 }
 
