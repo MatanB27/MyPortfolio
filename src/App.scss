@@ -2,6 +2,9 @@
 
 $current: $desktop;
 
+button {
+    all: unset;
+}
   
 .App {
     direction: ltr;
@@ -26,6 +29,14 @@ $current: $desktop;
             color: $dark-blue-grey;
             transition: all $transitionSpeed ease-in-out;
         }
+
+        .menu {
+            background-color: $light-grey;
+            transition: all $transitionSpeed ease-in-out;
+            &.open {
+                box-shadow: 0 1px 10px -2px $dark-blue-grey;
+            }
+        }
     }
 
     &.dark {
@@ -45,6 +56,13 @@ $current: $desktop;
         .text-theme {
             color: $light-darker-grey;
             transition: all $transitionSpeed ease-in-out;
+        }
+        .menu {
+            background-color: $dark-grey-darker;
+            transition: all $transitionSpeed ease-in-out;
+            &.open {
+                box-shadow: 0 1px 4px -2px $light-darker-grey;
+            }
         }
     }
 }

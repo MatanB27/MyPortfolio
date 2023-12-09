@@ -3,6 +3,23 @@
 $current: $mobile;
 $headerHeight: vw(40, $current);
 $headerMargin: vw(8, $current);
+
+.backdrop {
+    background-color: transparent;
+    opacity: 1;
+    transition: all $transitionSpeed ease-in-out;
+    background-color: transparent;
+    display: block;
+    &.open {
+        background-color: black;
+        opacity: .6;
+        height: 100%;
+        width: 100%;
+        // z-index: 30;
+        position: absolute;
+        transition: all $transitionSpeed ease-in-out;
+    }
+}
 header {
     display: flex;
     justify-content: center;
@@ -10,6 +27,7 @@ header {
     flex-direction: column;
     position: relative;
     width: 100%;
+    
     .header-top {
         height: $headerHeight;
         display: flex;
@@ -43,12 +61,12 @@ header {
         left: 0;
         top: 0;
         width: 100%;
-        background-color: green;
+        z-index: 1;
+
         &.open {
             flex-direction: column;
             top: - vw(45, $current);   
             transform: translateY(vw(85, $current));
-            z-index: 1;
         }
     }
 }
@@ -69,6 +87,10 @@ header {
 @media (min-width: $media-desktop) {
     $current: $desktop;
     $headerHeight: vw(60, $current);
+
+    .backdrop {
+        display: none;
+    }
     header {
         height: $headerHeight;
         padding-inline: vw(25, $current);

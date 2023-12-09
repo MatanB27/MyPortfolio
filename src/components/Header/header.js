@@ -42,8 +42,7 @@ export default function Header({
                     adasdasdsa dadadasdsadsa
                 </div>
             </header>
-            {/* TODO: finish@ */}
-        <div className={'backdrop'}/> 
+            <button className={`backdrop ${isMenuOpen ? 'open' : ''}`} onClick={handleMenu}/> 
         </>
     )    
 }
